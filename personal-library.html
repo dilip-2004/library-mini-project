@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="personal-library.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Personal library</h1>
+  </header>
+  <div class="search-bar">
+    <input type="text" name="search-input" id="search-input" placeholder="enter author name..." onkeydown="eventoption(event);">
+    <input type="text" name="book-title" id="book-title" placeholder="enter book title...">
+    <input type="number" name="year" id="year" placeholder="enter year...">
+    <button class="search-button" onclick="show();"><i class="fa">&#xf002;</i></button>
+  </div><br>
+
+  <div class="book-list">
+  </div><br>
+
+  <button class="show-more-button" onclick="showMore();">show more</button><br><br>
+
+  <h3 class="your">your book list</h3>
+  <ul class="your-book-list">
+  </ul>
+   
+    <h1 class="insert">inserting and deleting</h1>
+    <div class="all-button">
+      <button class="addbook-button" onclick="addbookform();">addbook</button>
+      <button class="removebook-button" onclick="removeBook();">reomve book</button>
+      <button class="addfrontbook-button" onclick="addBookToFront();">addbook to front</button>
+      <button class="removefrontbook-button" onclick="addBookToLast();">reomve first book</button>
+    </div>
+    <br><br>
+
+  <div class="addBookForm">
+    <h1 style="text-align: center;">Enter the following details</h1>
+    <label for="title">Title</label><br>
+    <input type="text" name="title" id="title"><br>
+    <label for="author">Author</label><br>
+    <input type="text" name="author" id="author"><br>
+    <label for="year">Year</label><br>
+    <input type="number" name="year" id="year"><br>
+    <label for="summary">Summary</label><br>
+    <textarea name="summary" id="summary" cols="100" rows="10"></textarea>
+    <button onclick="addBook();" class="addbook-button">add</button>
+  </div>
+
+  <script src="personal-library.js"></script>   
+</body>
+</html>
